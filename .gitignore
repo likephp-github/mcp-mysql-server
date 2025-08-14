@@ -1,0 +1,92 @@
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Built files
+dist/
+
+# Environment variables and configuration
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.multi.test
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Logs
+logs
+*.log
+.log
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+
+# nyc test coverage
+.nyc_output
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE files
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
+*~
+
+# Backup files
+*.backup.*
+*.bak
+
+# Test files and temporary scripts (keep essential test scripts)
+test-password.sh
+temp-test-*
+debug-*
+
+# Claude Desktop configuration backups
+*claude_desktop_config.json.backup*
+
+# Local development files
+local-*
+private-*
+
+# Database dumps and sensitive data
+*.sql
+*.dump
+*.db
+database-*
+
+# SSL certificates and keys (if any)
+*.pem
+*.key
+*.crt
+*.cert
+
+# API keys and credentials
+credentials.json
+secrets.json
+api-keys.json

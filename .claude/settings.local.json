@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir:*)",
+      "Bash(npm install)",
+      "Bash(npm run build:*)",
+      "Bash(npm test)",
+      "Bash(npm run tools:list:*)",
+      "Bash(npm run tools:tables:*)",
+      "Bash(npm run tools:test:*)",
+      "Bash(node:*)",
+      "Bash(npm run tools:all:*)",
+      "Bash(rm:*)",
+      "Bash(chmod:*)",
+      "Bash(./fix-claude-env.sh:*)",
+      "Bash(cp:*)",
+      "Bash(curl:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

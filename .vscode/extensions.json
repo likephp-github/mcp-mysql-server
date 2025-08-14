@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "saoudrizwan.claude-dev",
+    "ms-vscode.vscode-typescript-next",
+    "esbenp.prettier-vscode",
+    "bradlc.vscode-tailwindcss"
+  ]
+}

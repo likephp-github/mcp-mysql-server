@@ -1,0 +1,54 @@
+{
+  "name": "mcp-mysql-server",
+  "version": "1.0.0",
+  "description": "MCP Server for MySQL/MariaDB database operations",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js",
+    "start:http": "MCP_TRANSPORT_MODE=http node dist/index.js",
+    "start:both": "MCP_TRANSPORT_MODE=both node dist/index.js",
+    "dev:http": "MCP_TRANSPORT_MODE=http tsx src/index.ts",
+    "dev:both": "MCP_TRANSPORT_MODE=both tsx src/index.ts",
+    "test": "jest",
+    "server:status": "node check-server.js status",
+    "server:start": "node check-server.js start",
+    "server:stop": "node check-server.js stop",
+    "server:restart": "node check-server.js restart",
+    "tools:list": "node test-mcp.js list",
+    "tools:test": "node test-mcp.js test",
+    "tools:tables": "node test-mcp.js tables",
+    "tools:all": "node test-mcp.js all",
+    "claude:setup": "./setup-claude.sh",
+    "claude:check": "./check-claude-config.sh",
+    "claude:fix-env": "./fix-claude-env.sh"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^0.5.0",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^5.1.0",
+    "mysql2": "^3.10.0",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.0.0",
+    "@types/node": "^20.0.0",
+    "jest": "^29.0.0",
+    "ts-jest": "^29.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.0.0"
+  },
+  "keywords": [
+    "mcp",
+    "mysql",
+    "mariadb",
+    "database"
+  ],
+  "author": "",
+  "license": "MIT"
+}

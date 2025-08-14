@@ -467,9 +467,9 @@ npm run lint:fix
 
 ## 🙋‍♂️ 支援與反饋
 
-- 🐛 **問題回報**: [GitHub Issues](https://github.com/your-repo/issues)
-- 💡 **功能建議**: [GitHub Discussions](https://github.com/your-repo/discussions)
-- 📧 **聯絡方式**: your-email@example.com
+- 🐛 **問題回報**: [GitHub Issues](https://github.com/likephp-github/mcp-mysql-server/issues)
+- 💡 **功能建議**: [GitHub Discussions](https://github.com/likephp-github/mcp-mysql-server/wiki)
+- 📧 **聯絡方式**: likephp@hummingfood.com
 
 ## 📈 更新日誌
 

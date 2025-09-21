@@ -14,7 +14,8 @@
       "Bash(chmod:*)",
       "Bash(./fix-claude-env.sh:*)",
       "Bash(cp:*)",
-      "Bash(curl:*)"
+      "Bash(curl:*)",
+      "Bash(nc:*)"
     ],
     "deny": [],
     "ask": []

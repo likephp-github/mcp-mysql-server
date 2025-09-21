@@ -6,8 +6,8 @@ echo "🔧 修復 Claude Desktop 環境變數載入問題 (多資料庫支援)"
 echo "============================================"
 
 CLAUDE_CONFIG_FILE="$HOME/Library/Application Support/Claude/claude_desktop_config.json"
-ENV_FILE="/Volumes/HF-iMac2015-Storage/Projects/AI/MCP/DBConnector/.env"
-PROJECT_PATH="/Volumes/HF-iMac2015-Storage/Projects/AI/MCP/DBConnector"
+ENV_FILE="/Users/mat/Documents/html/mcp-mysql-server/.env"
+PROJECT_PATH="/Users/mat/Documents/html/mcp-mysql-server"
 
 # 顏色定義
 GREEN='\033[0;32m'

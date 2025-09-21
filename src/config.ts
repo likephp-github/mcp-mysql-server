@@ -15,7 +15,7 @@ const ServerConfigSchema = z.object({
 
 // 單資料庫配置 Schema (向下兼容)
 const SingleDBSchema = z.object({
-  DB_HOST: z.string().default('localhost'),
+  DB_HOST: z.string().default('127.0.0.1'),
   DB_PORT: z.coerce.number().default(3306),
   DB_USER: z.string(),
   DB_PASSWORD: z.string(),
@@ -71,7 +71,7 @@ function parseMultiDatabaseConfig(): MultiDatabaseConfig | null {
     for (const name of connectionNames) {
       const prefix = `DB_${name.toUpperCase()}_`;
       const config = {
-        host: process.env[`${prefix}HOST`] || 'localhost',
+        host: process.env[`${prefix}HOST`] || '127.0.0.1',
         port: parseInt(process.env[`${prefix}PORT`] || '3306'),
         user: process.env[`${prefix}USER`],
         password: process.env[`${prefix}PASSWORD`],
@@ -80,7 +80,18 @@ function parseMultiDatabaseConfig(): MultiDatabaseConfig | null {
       };
 
       if (!config.user || !config.password || !config.database) {
-        throw new Error(`Missing required configuration for database connection: ${name}`);
+        const missing = [];
+        if (!config.user) missing.push('user');
+        if (!config.password) missing.push('password');
+        if (!config.database) missing.push('database');
+
+        throw new Error(
+          `Missing required configuration for database connection '${name}': ${missing.join(', ')}.\n` +
+          `Please set the following environment variables in your .env file:\n` +
+          (!config.user ? `  DB_${name.toUpperCase()}_USER=your_username\n` : '') +
+          (!config.password ? `  DB_${name.toUpperCase()}_PASSWORD=your_password\n` : '') +
+          (!config.database ? `  DB_${name.toUpperCase()}_NAME=your_database_name\n` : '')
+        );
       }
 
       parsedConnections[name] = DatabaseConfigSchema.parse(config);
